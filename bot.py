@@ -33,7 +33,7 @@ async def on_message(message):
         return
      if message.content.startswith('$joke'):
        async def get_joke(self):
-         response = requests.get('https://api.chucknorris.io/jokes/random')
+         response = requests.get('https://dad-jokes.p.rapidapi.com/random/joke')
          joke = json.loads(response.text)
          return(joke['value'])
        the_joke = await get_joke(self)
